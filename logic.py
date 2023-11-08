@@ -53,3 +53,21 @@ def check_winner(board):
         return "Draw"
         
     return None
+
+def get_empty_board():
+    return [
+        [None,None,None],
+        [None,None,None],
+        [None,None,None],
+    ]
+
+def print_board(board):
+    for row in board:
+        print(row)
+
+def get_player_input(current_player):
+    player_input = input(f"player {current_player} please input (row,col): \n")
+    row_col_list = player_input.split(",")
+    row, col = [int(x)for x in row_col_list]
+    return row, col
+
